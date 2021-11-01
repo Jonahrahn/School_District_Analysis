@@ -5,19 +5,32 @@ The purpose of this analysis was to take a collection of 39,000+ students Math a
 ## Results:
 Using bulleted lists and images of DataFrames as support, address the following questions.
 
-How is the district summary affected?
-How is the school summary affected?
-How does replacing the ninth graders’ math and reading scores affect Thomas High School’s performance relative to the other schools?
-How does replacing the ninth-grade scores affect the following:
-Math and reading scores by grade
-Scores by school spending
-Scores by school size
-Scores by school type
+![image_name](Resources/district_summary_df.png)
+* The district summary is affected in the final five categories with all of the score dropping from .1-.3 points per category with only the Average Reading Scores shooting up .9 points.
 
+![image_name](Resources/per_school_summary_df(pre).png)
+* This is the School Summary that displays the data indexed by Each school in the district. This is before the correction for Thomas High School.
 
+![image_name](Resources/per_school_summary_df(Updated).png)
+* The school summary is affected by a data correction for Thomas High School with a 25 percent increase in the last three passing cateogries. 
 
+![image_name](Resources/Clean_student_data_NaN.png)
+* With the data correction above, Thomas High School moved to be the second best passing percentage of the 15 schools.
+
+![image_name](Resources/math_scores_by_grade.png)
+![image_name](Resources/reading_scores_by_grade.png)
+* The Output for the scores by grade for each school is demonstrated by using the .head() function to briefly show a portion of the table.
+
+![image_name](Resources/spending_summary_df.png)
+* Scores by school spending has been broken down into four price bins where the spending per student was used to sort and calculate the averages for each price level.
+
+![image_name](Resources/size_summary_df.png)
+* Using a similar method to the previous data table, I broke the schools into different size bins to display the averages per student size. 
+
+![image_name](Resources/type_summary_df.png)
+* In this table, we see the two types of schools displaying their averages with Charter beating District Schools in the overall passing percentage.
 
 
 ## Summary:
-Summarize four changes in the updated school district analysis after reading and math scores for the ninth grade at Thomas High School have been replaced with NaNs.
-The Modification of the Dataset to remove and repair the Thomas High School data impacted multiple displays of DataFrames in the later half of the script. The first script modification was 
+
++With the modification of the data for Thomas High School, some of our summary tables needed to get updated data. The first script modification was needed to update the metrics for the percentages in the district summary. This resulted in changes in all the percentages moving atmost .3 percentages either way. The second change needed to make the script work for the missing data was to recount all the passsing students for Thomas High School. This could then be used to calculate the percentages for the final three categories. The final step was to replace the changed variables and redisplay the data table with all of the modifications.
